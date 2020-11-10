@@ -17,6 +17,6 @@ Test automation project using REST-assured for Back-end tests. We are going to u
 
 - Create a maven project on Intellij and clone this repository. The dependencies are going to be installed.
 
-## :running_man: Running the tests :running_woman:
+## 🏎️ Running the tests 🏎️
 
-- To run the project is simple, just click on the green arrow on the header. 
+- To run the project is just click on the green arrow on the header. 
