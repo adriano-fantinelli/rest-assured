@@ -1,10 +1,10 @@
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.hamcrest.Matchers.*;
+
 import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class Activities {
+public class Activities extends dataActivities {
     @BeforeClass
     public static void base(){
         baseURI = "http://fakerestapi.azurewebsites.net/api/Activities/";
@@ -25,12 +25,7 @@ public class Activities {
     public void createActivity(){
         given()
                 .contentType("application/json")
-                .body("{" +
-                        "  \"ID\": 31,\n" +
-                        "  \"Title\": \"Play soccer\",\n" +
-                        "  \"DueDate\": \"2020-10-30T10:26:17.362Z\",\n" +
-                        "  \"Completed\": false\n" +
-                        "}")
+                .body(newActivity)
         .when()
                 .post("")
         .then()
@@ -64,12 +59,7 @@ public class Activities {
     public void editActivity(){
         given()
                 .contentType("application/json")
-                .body("{" +
-                        "  \"ID\": 10,\n" +
-                        "  \"Title\": \"Edited Activity\",\n" +
-                        "  \"DueDate\": \"2020-11-05T10:26:17.362Z\",\n" +
-                        "  \"Completed\": true\n" +
-                        "}")
+                .body(editedActivity)
         .when()
                 .put("10")
         .then()
