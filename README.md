@@ -11,7 +11,7 @@ Test automation project using REST-assured for Back-end tests. We are going to u
 
 ## 🪐	Setting up the environment 🪐
 
-- It is necessary to install [Java](https://www.java.com/pt-BR/download/manual.jsp) 
+- It is necessary to install [Java](https://www.java.com/en/download/manual.jsp) 
 
 - Then, let's download [Intellij](https://www.jetbrains.com/pt-br/idea/download/#section=windows)
 
