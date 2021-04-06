@@ -1,5 +1,7 @@
+package data;
 
-public class dataActivities {
+public class DataActivities {
+
     String newActivity = "{" +
             "  \"ID\": 31,\n" +
             "  \"Title\": \"Play soccer\",\n" +
@@ -13,4 +15,14 @@ public class dataActivities {
             "  \"DueDate\": \"2020-11-05T10:26:17.362Z\",\n" +
             "  \"Completed\": true\n" +
             "}";
+
+    public String getNewActivity() {
+        return newActivity;
+    }
+
+    public String getEditedActivity() {
+        return editedActivity;
+    }
+
+
 }

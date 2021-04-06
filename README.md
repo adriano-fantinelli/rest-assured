@@ -1,5 +1,5 @@
 # 🌐 REST-assured 🌐
-Test automation project using REST-assured for Back-end tests. We are going to use the API http://fakerestapi.azurewebsites.net/swagger/ui/index#/ to our tests.
+Test automation project using REST-assured for Back-end tests. We are going to use the fake API https://fakerestapi.azurewebsites.net/index.html to our tests. It is a fake API, but simulates a real test.
 
 ## 💻 Technologies 💻	
 

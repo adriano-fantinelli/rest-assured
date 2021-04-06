@@ -3,24 +3,24 @@
   "items": {
     "type": "object",
     "properties": {
-      "ID": {
+      "id": {
         "type": "integer"
       },
-      "Title": {
+      "title": {
         "type": "string"
       },
-      "DueDate": {
+      "dueDate": {
         "type": "string"
       },
-      "Completed": {
+      "completed": {
         "type": "boolean"
       }
     },
     "required": [
-      "ID",
-      "Title",
-      "DueDate",
-      "Completed"
+      "id",
+      "title",
+      "dueDate",
+      "completed"
     ]
   }
 }

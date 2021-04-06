@@ -1,68 +1,80 @@
-import org.junit.BeforeClass;
-import org.junit.Test;
+package tests;
+
+import data.DataActivities;
+import io.qameta.allure.*;
+import org.junit.*;
 
 import static io.restassured.RestAssured.*;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class Activities extends dataActivities {
+@Feature("Activities")
+public class Activities {
+
     @BeforeClass
-    public static void base(){
-        baseURI = "http://fakerestapi.azurewebsites.net/api/Activities/";
+    public static void base() {
+        baseURI = "https://fakerestapi.azurewebsites.net/api/v1/Activities";
     }
 
     @Test
-    public void searchAllActivities(){
+    @Story("Search all activities")
+    public void searchAllActivities() {
         given()
-        .when()
+                .when()
                 .get("")
-        .then()
+                .then()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/activities/activities-schema.json"))
                 .log().all();
     }
 
     @Test
-    public void createActivity(){
+    @Story("Create an activity")
+    public void createActivity() {
+        DataActivities dataActivities = new DataActivities();
         given()
                 .contentType("application/json")
-                .body(newActivity)
-        .when()
+                .body(dataActivities.getNewActivity())
+                .when()
                 .post("")
-        .then()
+                .then()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/activities/activity-schema.json"))
                 .log().all();
     }
 
     @Test
-    public void deleteActivity(){
+    @Story("Delete an activity")
+    public void deleteActivity() {
         given()
-        .when()
+                .when()
                 .delete("31")
-        .then()
+                .then()
                 .statusCode(200)
                 .log().all();
     }
 
     @Test
-    public void searchActivity(){
+    @Story("Search an activity")
+    public void searchActivity() {
         given()
-        .when()
+                .when()
                 .get("10")
-        .then()
+                .then()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/activities/activity-schema.json"))
                 .log().all();
     }
 
     @Test
-    public void editActivity(){
+    @Story("Edit an activity")
+    public void editActivity() {
+        DataActivities dataActivities = new data.DataActivities();
         given()
                 .contentType("application/json")
-                .body(editedActivity)
-        .when()
+                .body(dataActivities.getEditedActivity())
+                .when()
                 .put("10")
-        .then()
+                .then()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/activities/activity-schema.json"))
                 .log().all();
