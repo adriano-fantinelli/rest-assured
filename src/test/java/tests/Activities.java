@@ -28,6 +28,18 @@ public class Activities {
     }
 
     @Test
+    @Story("Search an activity")
+    public void searchActivity() {
+        given()
+                .when()
+                .get("10")
+                .then()
+                .statusCode(200)
+                .body(matchesJsonSchemaInClasspath("schemas/activities/activity-schema.json"))
+                .log().all();
+    }
+
+    @Test
     @Story("Create an activity")
     public void createActivity() {
         DataActivities dataActivities = new DataActivities();
@@ -36,29 +48,6 @@ public class Activities {
                 .body(dataActivities.getNewActivity())
                 .when()
                 .post("")
-                .then()
-                .statusCode(200)
-                .body(matchesJsonSchemaInClasspath("schemas/activities/activity-schema.json"))
-                .log().all();
-    }
-
-    @Test
-    @Story("Delete an activity")
-    public void deleteActivity() {
-        given()
-                .when()
-                .delete("31")
-                .then()
-                .statusCode(200)
-                .log().all();
-    }
-
-    @Test
-    @Story("Search an activity")
-    public void searchActivity() {
-        given()
-                .when()
-                .get("10")
                 .then()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/activities/activity-schema.json"))
@@ -77,6 +66,17 @@ public class Activities {
                 .then()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/activities/activity-schema.json"))
+                .log().all();
+    }
+
+    @Test
+    @Story("Delete an activity")
+    public void deleteActivity() {
+        given()
+                .when()
+                .delete("31")
+                .then()
+                .statusCode(200)
                 .log().all();
     }
 }
