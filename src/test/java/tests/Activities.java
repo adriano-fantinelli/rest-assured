@@ -1,6 +1,6 @@
 package tests;
 
-import data.DataActivities;
+import controller.DataActivities;
 import io.qameta.allure.*;
 import org.junit.*;
 
@@ -57,7 +57,7 @@ public class Activities {
     @Test
     @Story("Edit an activity")
     public void editActivity() {
-        DataActivities dataActivities = new data.DataActivities();
+        DataActivities dataActivities = new controller.DataActivities();
         given()
                 .contentType("application/json")
                 .body(dataActivities.getEditedActivity())
