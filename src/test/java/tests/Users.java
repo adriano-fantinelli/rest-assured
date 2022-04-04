@@ -1,24 +1,22 @@
 package tests;
 
-import controller.UsersController;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import model.UsersModel;
 import org.testng.annotations.Test;
 import requests.UsersRequests;
+import utils.BaseTest;
 
 import static controller.UsersController.*;
-import static controller.UsersController.idExistente;
-import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.post;
+import static controller.UsersController.putUserSuccess;
 import static org.hamcrest.Matchers.equalTo;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 @Feature("Users")
-public class Users {
+public class Users extends BaseTest {
 
     UsersRequests usersRequests = new UsersRequests();
     UsersModel postUserSuccess = postUserSuccess();
+    UsersModel putUserSuccess = putUserSuccess();
 
     @Test
     @Story("Search all users")
@@ -43,43 +41,44 @@ public class Users {
     @Test
     @Story("Create an user")
     public void createUser() {
-       Integer idResponse = usersRequests.postUsers(postUserSuccess)
+        Integer idResponse = usersRequests.postUsers(postUserSuccess)
                 .then()
-                .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
                 .body(
                         "id", equalTo(postUserSuccess.getId()),
                         "userName", equalTo(postUserSuccess.getUserName()),
                         "password", equalTo(postUserSuccess.getPassword())
                 )
-               .extract()
-               .path("id");
+                .statusCode(200)
+                .extract()
+                .path("id");
         usersRequests.deleteUsers(idResponse);
     }
 
-//    @Test
-//    @Story("Edit an user")
-//    public void editUser() {
-//        UsersController dataUsers = new UsersController();
-//        given()
-//                .contentType("application/json")
-//                .body(dataUsers.getEditedUser())
-//                .when()
-//                .put("10")
-//                .then()
-//                .statusCode(200)
-//                .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
-//                .log().all();
-//    }
+    @Test
+    @Story("Edit an user")
+    public void editUser() {
+        Integer idResponse = usersRequests.postUsers(postUserSuccess)
+                .then()
+                .extract()
+                .path("id");
+        usersRequests.putUsers(putUserSuccess, idResponse)
+                .then()
+                .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
+                .body(
+                        "id", equalTo(putUserSuccess().getId()),
+                        "userName", equalTo(putUserSuccess.getUserName()),
+                        "password", equalTo(putUserSuccess.getPassword())
+                )
+                .statusCode(200);
+        usersRequests.deleteUsers(idResponse);
+    }
 
     @Test
     @Story("Delete an user")
     public void deleteUser() {
-        given()
-                .when()
-                .delete("31")
+        usersRequests.deleteUsers(idExistente())
                 .then()
-                .statusCode(200)
-                .log().all();
+                .statusCode(200);
     }
 }

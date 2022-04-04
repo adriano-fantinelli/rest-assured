@@ -1,10 +1,12 @@
 package utils;
 
-import org.junit.jupiter.api.BeforeAll;
+import org.testng.annotations.BeforeTest;
 
 import static io.restassured.RestAssured.baseURI;
 
 public class BaseTest {
-    @BeforeAll
-    public static void setup() { baseURI = "https://fakerestapi.azurewebsites.net/api/v1/";}
+    @BeforeTest
+    public static void setup() {
+        baseURI = "https://fakerestapi.azurewebsites.net/api/v1/";
+    }
 }

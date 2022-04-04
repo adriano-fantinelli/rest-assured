@@ -10,13 +10,17 @@
 
     <properties>
         <rest-assured.version>5.0.0</rest-assured.version>
-        <junit.version>4.13.1</junit.version>
-        <junit-jupiter-api.version>5.8.2</junit-jupiter-api.version>
-        <allure-testng.version>2.17.3</allure-testng.version>
-        <lombok.version>1.18.22</lombok.version>
+        <junit.version>4.3.1</junit.version>
+        <junit-jupiter-api.version>5.8.0-M1</junit-jupiter-api.version>
+        <allure-testng.version>2.13.9</allure-testng.version>
+        <lombok.version>1.18.20</lombok.version>
         <json-schema-validator.version>5.0.0</json-schema-validator.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <slf4j.version>1.7.36</slf4j.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <reportng.version>1.2.2</reportng.version>
+        <allure-testng.version>2.17.3</allure-testng.version>
     </properties>
 
     <dependencies>
@@ -53,6 +57,27 @@
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>${json-schema-validator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure-testng.version}</version>
         </dependency>
     </dependencies>
 </project>

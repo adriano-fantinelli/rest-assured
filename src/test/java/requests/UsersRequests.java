@@ -12,7 +12,7 @@ public class UsersRequests {
     public Response getUsers() {
         return given()
                 .when()
-                .get(users);
+                .get("/Users");
     }
 
     public Response getUsersId(int id) {
@@ -25,7 +25,7 @@ public class UsersRequests {
     public Response postUsers(UsersModel user) {
         return given()
                 .contentType("application/json")
-                .body(users)
+                .body(user)
                 .when()
                 .post(users);
     }
@@ -42,6 +42,6 @@ public class UsersRequests {
     public Response deleteUsers(int id) {
         return given()
                 .pathParam("id", id)
-                .delete(users + "/id");
+                .delete(users + "/{id}");
     }
 }

@@ -19,4 +19,7 @@ Test automation project using REST-assured for Back-end tests. We are going to u
 
 ## 🏎️ Running the tests 🏎️
 
+
+- Allure allure serve allure-results
+
 - To run the project is just click on the green arrow on the header. 
