@@ -1,88 +1,102 @@
 package tests;
 
-import data.DataUsers;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
-import org.testng.annotations.BeforeClass;
+import io.qameta.allure.*;
+import model.UsersModel;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import requests.UsersRequests;
+import utils.BaseTest;
 
-import static io.restassured.RestAssured.baseURI;
-import static io.restassured.RestAssured.given;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static controller.UsersController.*;
+import static controller.UsersController.putUserSuccess;
 import static org.hamcrest.Matchers.equalTo;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 @Feature("Users")
-public class Users {
+public class Users extends BaseTest {
 
-    @BeforeClass
-    public static void base(){
-        baseURI = "https://fakerestapi.azurewebsites.net/api/v1/Users";
+    @DataProvider(name = "dadosInvalidos")
+    public Object[][] dadosInvalidos() {
+        return new Object[][]{
+                {idInexistente(), notFound()}
+        };
     }
+
+    UsersRequests usersRequests = new UsersRequests();
+    UsersModel postUserSuccess = postUserSuccess();
+    UsersModel putUserSuccess = putUserSuccess();
 
     @Test
     @Story("Search all users")
     public void searchAllUsers() {
-        given()
-                .when()
-                .get("")
+        usersRequests.getUsers()
                 .then()
                 .statusCode(200)
-                .body(matchesJsonSchemaInClasspath("schemas/users/users-schema.json"))
-                .log().all();
+                .body(matchesJsonSchemaInClasspath("schemas/users/users-schema.json"));
     }
 
     @Test
-    @Story("Search an user")
-    public void searchUser(){
-        given()
-                .when()
-                .get("9")
+    @Story("Search an existent user")
+    public void searchExistentUser() {
+        usersRequests.getUsersId(idExistente())
                 .then()
                 .assertThat()
                 .statusCode(200)
-                .body("id", equalTo(9))
                 .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
-                .log().all();
+                .body("id", equalTo(idExistente()));
+    }
+
+    @Test(dataProvider = "dadosInvalidos")
+    @Story("Search a nonexistent user")
+    public void searchNonexistentUser(int id, String title) {
+        usersRequests.getUsersId(id)
+                .then()
+                .assertThat()
+                .statusCode(404)
+                .body("title", equalTo(title));
     }
 
     @Test
     @Story("Create an user")
-    public void createUser(){
-        DataUsers dataUsers = new DataUsers();
-        given()
-                .contentType("application/json")
-                .body(dataUsers.getNewUser())
-                .when()
-                .post()
+    public void createUser() {
+        Integer idResponse = usersRequests.postUsers(postUserSuccess)
                 .then()
-                .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
-                .log().all();
+                .body(
+                        "id", equalTo(postUserSuccess.getId()),
+                        "userName", equalTo(postUserSuccess.getUserName()),
+                        "password", equalTo(postUserSuccess.getPassword())
+                )
+                .statusCode(200)
+                .extract()
+                .path("id");
+        usersRequests.deleteUsers(idResponse);
     }
 
     @Test
     @Story("Edit an user")
-    public void editUser(){
-        DataUsers dataUsers = new DataUsers();
-        given()
-                .contentType("application/json")
-                .body(dataUsers.getEditedUser())
-                .when()
-                .put("10")
+    public void editUser() {
+        Integer idResponse = usersRequests.postUsers(postUserSuccess)
                 .then()
-                .statusCode(200)
+                .extract()
+                .path("id");
+        usersRequests.putUsers(putUserSuccess, idResponse)
+                .then()
                 .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
-                .log().all();
+                .body(
+                        "id", equalTo(putUserSuccess().getId()),
+                        "userName", equalTo(putUserSuccess.getUserName()),
+                        "password", equalTo(putUserSuccess.getPassword())
+                )
+                .statusCode(200);
+        usersRequests.deleteUsers(idResponse);
     }
 
     @Test
     @Story("Delete an user")
     public void deleteUser() {
-        given()
-                .when()
-                .delete("31")
+        usersRequests.deleteUsers(idExistente())
                 .then()
-                .statusCode(200)
-                .log().all();
+                .statusCode(200);
     }
 }

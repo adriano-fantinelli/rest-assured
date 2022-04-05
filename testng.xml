@@ -1,0 +1,13 @@
+<suite name="Users">
+
+    <test name="Users">
+
+        <classes>
+
+            <class name="tests.Users"/>
+
+        </classes>
+
+    </test>
+
+</suite>

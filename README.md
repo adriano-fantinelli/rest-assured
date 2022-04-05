@@ -1,22 +1,25 @@
-# 🌐 REST-assured 🌐
+# REST-assured
 Test automation project using REST-assured for Back-end tests. We are going to use the fake API https://fakerestapi.azurewebsites.net/index.html to our tests. It is a fake API, but simulates a real test.
 
-## 💻 Technologies 💻	
+## Technologies
 
-- REST-assured
+- REST-Assured
 - Junit
 - Java
 - Maven
-- Json Schema Validator
 
-## 🪐	Setting up the environment 🪐
+## Setting up the environment
 
-- It is necessary to install [Java](https://www.java.com/en/download/manual.jsp) 
+- It is necessary to install:
+  - [Java](https://www.java.com/en/download/manual.jsp)
+  - [Intellij](https://www.jetbrains.com/pt-br/idea/download/#section=windows)
+  - [Allure](https://docs.qameta.io/allure/)
 
-- Then, let's download [Intellij](https://www.jetbrains.com/pt-br/idea/download/#section=windows)
+## Running the tests
 
-- Create a maven project on Intellij and clone this repository. The dependencies are going to be installed.
+- You can use the file testng.xml to run the tests.
 
-## 🏎️ Running the tests 🏎️
-
-- To run the project is just click on the green arrow on the header. 
+- To generate an Allure report after running, use:
+```
+allure serve allure-results
+```
