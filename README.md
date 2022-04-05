@@ -23,3 +23,4 @@ Test automation project using REST-assured for Back-end tests. We are going to u
 ```
 allure serve allure-results
 ```
+- Report on Github Pages: https://adriano-fantinelli.github.io/rest-assured-java-automation/
