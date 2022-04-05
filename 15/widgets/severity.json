@@ -1,0 +1,61 @@
+[ {
+  "uid" : "f0059afcbdad8e72",
+  "name" : "editUser",
+  "time" : {
+    "start" : 1649185129361,
+    "stop" : 1649185130959,
+    "duration" : 1598
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "378187486de0439b",
+  "name" : "deleteUser",
+  "time" : {
+    "start" : 1649185128839,
+    "stop" : 1649185129356,
+    "duration" : 517
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "63e7473c129b98f7",
+  "name" : "searchAllUsers",
+  "time" : {
+    "start" : 1649185130963,
+    "stop" : 1649185131491,
+    "duration" : 528
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d105f655dc285781",
+  "name" : "searchExistentUser",
+  "time" : {
+    "start" : 1649185131496,
+    "stop" : 1649185132023,
+    "duration" : 527
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "32335b5aefe7cc4a",
+  "name" : "searchNonexistentUser",
+  "time" : {
+    "start" : 1649185132026,
+    "stop" : 1649185132544,
+    "duration" : 518
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "90650938e767fcf0",
+  "name" : "createUser",
+  "time" : {
+    "start" : 1649185124467,
+    "stop" : 1649185128790,
+    "duration" : 4323
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
