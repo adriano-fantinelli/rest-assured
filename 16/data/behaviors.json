@@ -1,0 +1,111 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Users",
+    "children" : [ {
+      "name" : "Create an user",
+      "children" : [ {
+        "name" : "createUser",
+        "uid" : "55ac429a673f345b",
+        "parentUid" : "51a544de4b57e9c120ebfa5d9a2ac574",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649185353952,
+          "stop" : 1649185358086,
+          "duration" : 4134
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "51a544de4b57e9c120ebfa5d9a2ac574"
+    }, {
+      "name" : "Delete an user",
+      "children" : [ {
+        "name" : "deleteUser",
+        "uid" : "6c9755e3cde46069",
+        "parentUid" : "d2328932b52c81ae5efd77ea671cf531",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649185358122,
+          "stop" : 1649185358896,
+          "duration" : 774
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d2328932b52c81ae5efd77ea671cf531"
+    }, {
+      "name" : "Edit an user",
+      "children" : [ {
+        "name" : "editUser",
+        "uid" : "26c17ef07e2f8309",
+        "parentUid" : "5fd52dea883e0d3cb20fafe74d7be8c2",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649185358899,
+          "stop" : 1649185361234,
+          "duration" : 2335
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "5fd52dea883e0d3cb20fafe74d7be8c2"
+    }, {
+      "name" : "Search all users",
+      "children" : [ {
+        "name" : "searchAllUsers",
+        "uid" : "a7f829700b6dc02a",
+        "parentUid" : "6691f66dd30baaa5b3c8aa5bf631ba9b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649185361237,
+          "stop" : 1649185362001,
+          "duration" : 764
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6691f66dd30baaa5b3c8aa5bf631ba9b"
+    }, {
+      "name" : "Search an existent user",
+      "children" : [ {
+        "name" : "searchExistentUser",
+        "uid" : "fd3db66c5be85188",
+        "parentUid" : "f8ba09a4c252dcb124fbded4b87cf772",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649185362004,
+          "stop" : 1649185362742,
+          "duration" : 738
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f8ba09a4c252dcb124fbded4b87cf772"
+    }, {
+      "name" : "Search a nonexistent user",
+      "children" : [ {
+        "name" : "searchNonexistentUser",
+        "uid" : "b17857a946c698c1",
+        "parentUid" : "d76ab214d25e95e01fa3b3083d152d7b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1649185362747,
+          "stop" : 1649185363538,
+          "duration" : 791
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "1000", "Not Found" ]
+      } ],
+      "uid" : "d76ab214d25e95e01fa3b3083d152d7b"
+    } ],
+    "uid" : "8233a41300bd5d5bd2551cb8ccf39969"
+  } ],
+  "name" : "behaviors"
+}
