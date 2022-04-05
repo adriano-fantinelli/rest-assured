@@ -6,6 +6,10 @@ public class UsersController {
 
     public static int idExistente() { return 10; }
 
+    public static int idInexistente() { return 1000; }
+
+    public static String notFound() { return "Not Found"; }
+
     public static UsersModel postUserSuccess () {
         return new UsersModel(
                 30,

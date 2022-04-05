@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.*;
 import model.UsersModel;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import requests.UsersRequests;
 import utils.BaseTest;
@@ -13,6 +14,13 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 
 @Feature("Users")
 public class Users extends BaseTest {
+
+    @DataProvider(name = "dadosInvalidos")
+    public Object[][] dadosInvalidos() {
+        return new Object[][]{
+                {idInexistente(), notFound()}
+        };
+    }
 
     UsersRequests usersRequests = new UsersRequests();
     UsersModel postUserSuccess = postUserSuccess();
@@ -28,14 +36,24 @@ public class Users extends BaseTest {
     }
 
     @Test
-    @Story("Search an user")
-    public void searchUser() {
+    @Story("Search an existent user")
+    public void searchExistentUser() {
         usersRequests.getUsersId(idExistente())
                 .then()
                 .assertThat()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
                 .body("id", equalTo(idExistente()));
+    }
+
+    @Test(dataProvider = "dadosInvalidos")
+    @Story("Search a nonexistent user")
+    public void searchNonexistentUser(int id, String title) {
+        usersRequests.getUsersId(id)
+                .then()
+                .assertThat()
+                .statusCode(404)
+                .body("title", equalTo(title));
     }
 
     @Test
