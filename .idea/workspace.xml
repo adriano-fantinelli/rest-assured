@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2e9888d-8aae-4e6d-971e-b64fc6177808" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/rest-assured-java-automation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utils/CustomListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/model/UsersModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/UsersModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/requests/UsersRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/requests/UsersRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +23,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="27FLQamVATuyrnkupn2A5lSdpK5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../desafio-automacao-de-testes-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../selenium-java-automation" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>

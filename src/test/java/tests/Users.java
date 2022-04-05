@@ -14,8 +14,8 @@ import static test.java.controller.UsersController.*;
 @Feature("Users")
 public class Users extends BaseTest {
 
-    @DataProvider(name = "dadosInvalidos")
-    public Object[][] dadosInvalidos() {
+    @DataProvider(name = "invalid")
+    public Object[][] invalid() {
         return new Object[][]{
                 {idInexistente(), notFound()}
         };
@@ -45,7 +45,7 @@ public class Users extends BaseTest {
                 .body("id", equalTo(idExistente()));
     }
 
-    @Test(dataProvider = "dadosInvalidos")
+    @Test(dataProvider = "invalid")
     @Story("Search a nonexistent user")
     public void searchNonexistentUser(int id, String title) {
         usersRequests.getUsersId(id)
