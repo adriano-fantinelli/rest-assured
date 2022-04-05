@@ -1,7 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Apr 05 18:52:52 GMT 2022","Tue Apr 05 18:52:52 GMT 2022","811","Users","Users","test.java.tests.Users","test.java.tests.Users","searchExistentUser","searchExistentUser",""
-"passed","Tue Apr 05 18:52:52 GMT 2022","Tue Apr 05 18:52:53 GMT 2022","809","Users","Users","test.java.tests.Users","test.java.tests.Users","searchNonexistentUser","searchNonexistentUser",""
-"passed","Tue Apr 05 18:52:43 GMT 2022","Tue Apr 05 18:52:47 GMT 2022","4009","Users","Users","test.java.tests.Users","test.java.tests.Users","createUser","createUser",""
-"passed","Tue Apr 05 18:52:48 GMT 2022","Tue Apr 05 18:52:51 GMT 2022","2552","Users","Users","test.java.tests.Users","test.java.tests.Users","editUser","editUser",""
-"passed","Tue Apr 05 18:52:47 GMT 2022","Tue Apr 05 18:52:48 GMT 2022","800","Users","Users","test.java.tests.Users","test.java.tests.Users","deleteUser","deleteUser",""
-"passed","Tue Apr 05 18:52:51 GMT 2022","Tue Apr 05 18:52:52 GMT 2022","820","Users","Users","test.java.tests.Users","test.java.tests.Users","searchAllUsers","searchAllUsers",""

@@ -1,0 +1,98 @@
+{
+  "uid" : "8924baad10b9d691",
+  "name" : "editUser",
+  "fullName" : "test.java.tests.Users.editUser",
+  "historyId" : "a5d9a02af8fc761b6591ab3746155ab2",
+  "time" : {
+    "start" : 1649184968856,
+    "stop" : 1649184970464,
+    "duration" : 1608
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1649184963550
+    },
+    "description" : "",
+    "status" : "unknown",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1649184963556,
+      "stop" : 1649184964048,
+      "duration" : 492
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "testClass",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "testMethod",
+    "value" : "editUser"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Users"
+  }, {
+    "name" : "suite",
+    "value" : "Users"
+  }, {
+    "name" : "subSuite",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "host",
+    "value" : "fv-az38-565"
+  }, {
+    "name" : "thread",
+    "value" : "2269@fv-az38-565.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Edit an user"
+  }, {
+    "name" : "feature",
+    "value" : "Users"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8924baad10b9d691.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,95 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Users",
+    "children" : [ {
+      "name" : "Users",
+      "children" : [ {
+        "name" : "test.java.tests.Users",
+        "children" : [ {
+          "name" : "createUser",
+          "uid" : "da1542b9b38e3309",
+          "parentUid" : "c99dcb1cadd851bbaa8955f46528a3c8",
+          "status" : "passed",
+          "time" : {
+            "start" : 1649184964439,
+            "stop" : 1649184968301,
+            "duration" : 3862
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "deleteUser",
+          "uid" : "e6a3e5ea2360f72e",
+          "parentUid" : "c99dcb1cadd851bbaa8955f46528a3c8",
+          "status" : "passed",
+          "time" : {
+            "start" : 1649184968337,
+            "stop" : 1649184968853,
+            "duration" : 516
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "editUser",
+          "uid" : "8924baad10b9d691",
+          "parentUid" : "c99dcb1cadd851bbaa8955f46528a3c8",
+          "status" : "passed",
+          "time" : {
+            "start" : 1649184968856,
+            "stop" : 1649184970464,
+            "duration" : 1608
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "searchAllUsers",
+          "uid" : "e9eb48c787b3f7a9",
+          "parentUid" : "c99dcb1cadd851bbaa8955f46528a3c8",
+          "status" : "passed",
+          "time" : {
+            "start" : 1649184970468,
+            "stop" : 1649184971013,
+            "duration" : 545
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "searchExistentUser",
+          "uid" : "71f295dc937adb70",
+          "parentUid" : "c99dcb1cadd851bbaa8955f46528a3c8",
+          "status" : "passed",
+          "time" : {
+            "start" : 1649184971015,
+            "stop" : 1649184971540,
+            "duration" : 525
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "searchNonexistentUser",
+          "uid" : "ac81a95b22314eab",
+          "parentUid" : "c99dcb1cadd851bbaa8955f46528a3c8",
+          "status" : "passed",
+          "time" : {
+            "start" : 1649184971544,
+            "stop" : 1649184972056,
+            "duration" : 512
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "1000", "Not Found" ]
+        } ],
+        "uid" : "c99dcb1cadd851bbaa8955f46528a3c8"
+      } ],
+      "uid" : "41420f2c05ea952626fb1f91f88e1690"
+    } ],
+    "uid" : "4b55247c12236e6a574fc40842be88a5"
+  } ],
+  "name" : "suites"
+}
