@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://adriano-fantinelli.github.io/rest-assured-java-automation",
+  "buildOrder" : 13,
+  "buildName" : "GitHub Actions Run #2098172636",
+  "buildUrl" : "https://github.com/adriano-fantinelli/rest-assured-java-automation/actions/runs/2098172636",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://adriano-fantinelli.github.io/rest-assured-java-automation/13/"
+} ]

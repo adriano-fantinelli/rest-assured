@@ -1,0 +1,98 @@
+{
+  "uid" : "653f12496daf9e3a",
+  "name" : "createUser",
+  "fullName" : "test.java.tests.Users.createUser",
+  "historyId" : "13f42f78227ab552e0866d511075d6f8",
+  "time" : {
+    "start" : 1649184763807,
+    "stop" : 1649184767816,
+    "duration" : 4009
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1649184763318
+    },
+    "description" : "",
+    "status" : "unknown",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1649184763319,
+      "stop" : 1649184763720,
+      "duration" : 401
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "testClass",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "testMethod",
+    "value" : "createUser"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Users"
+  }, {
+    "name" : "suite",
+    "value" : "Users"
+  }, {
+    "name" : "subSuite",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "host",
+    "value" : "fv-az200-765"
+  }, {
+    "name" : "thread",
+    "value" : "2282@fv-az200-765.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Create an user"
+  }, {
+    "name" : "feature",
+    "value" : "Users"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "653f12496daf9e3a.json",
+  "parameterValues" : [ ]
+}

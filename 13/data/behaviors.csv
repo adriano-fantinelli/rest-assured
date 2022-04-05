@@ -1,0 +1,7 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Users","Search an existent user","0","0","1","0","0"
+"","Users","Search a nonexistent user","0","0","1","0","0"
+"","Users","Create an user","0","0","1","0","0"
+"","Users","Edit an user","0","0","1","0","0"
+"","Users","Delete an user","0","0","1","0","0"
+"","Users","Search all users","0","0","1","0","0"
