@@ -1,16 +1,15 @@
-package tests;
+package test.java.tests;
 
 import io.qameta.allure.*;
-import model.UsersModel;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import requests.UsersRequests;
-import utils.BaseTest;
+import test.java.model.UsersModel;
+import test.java.requests.UsersRequests;
+import test.java.utils.BaseTest;
 
-import static controller.UsersController.*;
-import static controller.UsersController.putUserSuccess;
 import static org.hamcrest.Matchers.equalTo;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static test.java.controller.UsersController.*;
 
 @Feature("Users")
 public class Users extends BaseTest {

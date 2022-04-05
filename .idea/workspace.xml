@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2e9888d-8aae-4e6d-971e-b64fc6177808" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/rest-assured-java-automation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/CustomListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controller/UsersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/UsersModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/requests/UsersRequests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/utils/BaseTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/model/UsersModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/UsersModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/requests/UsersRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/requests/UsersRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/utils/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,13 +37,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../desafio-automacao-de-testes-api" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager" selected="TestNG.C:/git/rest-assured-java-automation/testng.xml">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn test" />
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.Users">
     <configuration name="C:/git/rest-assured-java-automation/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-assured-java-automation" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -54,12 +66,12 @@
       <module name="rest-assured-java-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="test.java.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.Users" />
+      <option name="MAIN_CLASS_NAME" value="test.java.tests.Users" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -67,17 +79,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Users.editUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Users.searchAllUsers" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rest-assured-java-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="test.java.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.Users" />
-      <option name="METHOD_NAME" value="editUser" />
+      <option name="PACKAGE_NAME" value="test.java.tests" />
+      <option name="MAIN_CLASS_NAME" value="test.java.tests.Users" />
+      <option name="METHOD_NAME" value="searchAllUsers" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -107,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/git/rest-assured-java-automation/testng.xml" />
         <item itemvalue="TestNG.Users" />
+        <item itemvalue="TestNG.Users.searchAllUsers" />
+        <item itemvalue="TestNG.C:/git/rest-assured-java-automation/testng.xml" />
         <item itemvalue="TestNG.&lt;default&gt; (1)" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.Users.editUser" />
       </list>
     </recent_temporary>
   </component>

@@ -1,4 +1,4 @@
-package utils;
+package test.java.utils;
 
 import org.testng.annotations.BeforeTest;
 

@@ -1,7 +1,7 @@
-package requests;
+package test.java.requests;
 
 import io.restassured.response.Response;
-import model.UsersModel;
+import test.java.model.UsersModel;
 
 import static io.restassured.RestAssured.given;
 

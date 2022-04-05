@@ -1,4 +1,5 @@
-package model;
+package test.java.model;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
