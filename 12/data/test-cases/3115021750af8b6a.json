@@ -1,0 +1,104 @@
+{
+  "uid" : "3115021750af8b6a",
+  "name" : "searchNonexistentUser",
+  "fullName" : "test.java.tests.Users.searchNonexistentUser",
+  "historyId" : "aca7af6704e6305d4966090d3321649b",
+  "time" : {
+    "start" : 1649184314425,
+    "stop" : 1649184315192,
+    "duration" : 767
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1649184304979
+    },
+    "description" : "",
+    "status" : "unknown",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setup",
+    "time" : {
+      "start" : 1649184304979,
+      "stop" : 1649184305366,
+      "duration" : 387
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "testClass",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "testMethod",
+    "value" : "searchNonexistentUser"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Users"
+  }, {
+    "name" : "suite",
+    "value" : "Users"
+  }, {
+    "name" : "subSuite",
+    "value" : "test.java.tests.Users"
+  }, {
+    "name" : "host",
+    "value" : "fv-az123-48"
+  }, {
+    "name" : "thread",
+    "value" : "2305@fv-az123-48.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "Search a nonexistent user"
+  }, {
+    "name" : "feature",
+    "value" : "Users"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "1000"
+  }, {
+    "name" : "arg1",
+    "value" : "Not Found"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "3115021750af8b6a.json",
+  "parameterValues" : [ "1000", "Not Found" ]
+}
