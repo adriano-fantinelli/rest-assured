@@ -17,7 +17,7 @@ public class Users extends BaseTest {
     @DataProvider(name = "invalid")
     public Object[][] invalid() {
         return new Object[][]{
-                {idInexistente(), notFound()}
+                {nonexistentId(), notFound()}
         };
     }
 
@@ -37,12 +37,12 @@ public class Users extends BaseTest {
     @Test
     @Story("Search an existent user")
     public void searchExistentUser() {
-        usersRequests.getUsersId(idExistente())
+        usersRequests.getUsersId(existentId())
                 .then()
                 .assertThat()
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/users/user-schema.json"))
-                .body("id", equalTo(idExistente()));
+                .body("id", equalTo(existentId()));
     }
 
     @Test(dataProvider = "invalid")
@@ -94,7 +94,7 @@ public class Users extends BaseTest {
     @Test
     @Story("Delete an user")
     public void deleteUser() {
-        usersRequests.deleteUsers(idExistente())
+        usersRequests.deleteUsers(existentId())
                 .then()
                 .statusCode(200);
     }
